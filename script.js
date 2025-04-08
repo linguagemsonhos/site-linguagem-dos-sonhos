@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (email || phone) {
             if (phone && !phoneRegex.test(phone)) {
-                alert("Por favor, insira um WhatsApp válido: (DD)99999-9999 ou (DD) 99999-9999");
+                alert("Por favor, insira um WhatsApp válido: (DD)999999999 ou (DD) 99999-9999");
                 return;
             }
             
