@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Linguagem dos Sonhos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Interpretação Profissional de Sonhos</h1>
+            <p>Desvende os mistérios do seu subconsciente</p>
+        </div>
+    </header>
+
+    <section class="dream-gallery">
+        <div class="gallery-item">
+            <img src="images/universo.jpg" alt="Universo místico">
+            <p>Sonhos cósmicos</p>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sonho.jpg" alt="Cena de sonho">
+            <p>Simbolismos ocultos</p>
+        </div>
+        <div class="gallery-item">
+            <img src="images/misterio.jpg" alt="Mistérios">
+            <p>Mensagens secretas</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2>Quer saber o que seu sonho quis dizer para você?</h2>
+            <p>Faça o PIX de R$50,00 e descubra o seu significado!</p>
+
+            <!-- Formulário de Contato -->
+            <div id="contactForm" class="contact-form">
+                <h3>Informe seu <strong>e-mail ou WhatsApp</strong> para receber a resposta:</h3>
+                <div class="form-group">
+                    <input type="email" id="userEmail" placeholder="Seu e-mail">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="userPhone" placeholder="WhatsApp (DD) 99999-9999">
+                </div>
+                <button id="verifyBtn" class="cta-button">Avançar</button>
+            </div>
+
+            <!-- QR Code e Botão (inicialmente oculto) -->
+            <div id="paymentSection" style="display:none;">
+                <div class="pix-payment">
+                    <img src="images/qrcode-pix.jpeg" alt="QR Code PIX">
+                    <div class="pix-info">
+                        <p>Chave PIX: alinguagemdossonhos3@gmail.com</p>
+                        <button onclick="copyPixKey()">Copiar</button>
+                    </div>
+                </div>
+                <button id="dreamBtn" class="cta-button">Descrever Meu Sonho</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal do Sonho -->
+    <div id="dreamModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Descreva seu sonho</h2>
+            <form id="dreamForm" action="https://formsubmit.co/alinguagemdossonhos3@gmail.com" method="POST">
+                <input type="hidden" id="formEmail" name="email">
+                <input type="hidden" id="formPhone" name="phone">
+                <textarea name="dream" placeholder="Descreva em detalhes (cores, emoções, símbolos)..." required></textarea>
+                <button type="submit">Enviar para Interpretação</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>A Linguagem dos Sonhos &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
