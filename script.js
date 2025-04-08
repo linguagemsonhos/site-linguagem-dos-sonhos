@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const phone = document.getElementById('userPhone').value;
         
         // Regex que aceita (DD)99999-9999 (SEM espaço)
-        const phoneRegex = /^\(\d{2}\)\d{4,5}-\d{4}$/;
+       const phoneRegex = /^\(\d{2}\)\s?\d{4,5}-?\d{4}$/;  
         
         if (email || phone) {
             if (phone && !phoneRegex.test(phone)) {
-                alert('Por favor, insira um WhatsApp válido: (DD)99999-9999');
+                alert("Por favor, insira um WhatsApp válido: (DD)99999-9999 ou (DD) 99999-9999");
                 return;
             }
             
